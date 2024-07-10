@@ -9,11 +9,13 @@ function TextImageSection({
   children,
   invert = false,
   override,
+  className,
 }: {
   images?: string[];
   children: React.ReactNode;
   invert?: boolean;
-  override?: React.ReactNode;
+  override?: () => React.ReactNode;
+  className?: string;
 }) {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -27,12 +29,21 @@ function TextImageSection({
   return (
     <div
       className={cn(
-        "max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-24 p-5 overflow-x-clip scale-90 md:scale-100"
+        "max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-24 p-5 overflow-x-clip scale-90 md:scale-100",
+        className
       )}
     >
       {content.map((child, index) => {
         if (child === true) {
-          if (override) return <>{override}</>;
+          if (override)
+            return (
+              <div
+                className="h-[700px] flex items-center justify-center"
+                key={index}
+              >
+                {override()}
+              </div>
+            );
           if (!images) return;
           return (
             <div

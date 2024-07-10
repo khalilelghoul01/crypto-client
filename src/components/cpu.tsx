@@ -12,20 +12,21 @@ const Box = forwardRef<
   { className?: string; children?: React.ReactNode; border?: boolean }
 >(({ className, children, border = true }, ref) => {
   return (
-    <div
-      ref={ref}
-      className={cn(
-        "relative text-center z-10 flex h-12 items-center justify-center rounded-3xl w-fit bg-white/30 backdrop-blur-md p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] text-sm ",
-        className
-      )}
-    >
-      {children}
-      {border && <BorderBeam />}
+    <div className="relative" ref={ref}>
+      <div
+        className={cn(
+          "text-center  z-40 min-w-24 flex h-12 items-center justify-center rounded-3xl w-fit bg-white/30 backdrop-blur-md p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] text-xs md:text-sm ",
+          className
+        )}
+      >
+        {children}
+        {border && <BorderBeam />}
+      </div>
     </div>
   );
 });
 
-Box.displayName = "Circle";
+Box.displayName = "Box";
 
 export function CPU() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,39 +42,9 @@ export function CPU() {
 
   return (
     <div
-      className="relative flex h-[500px] w-full  justify-center overflow-hidden rounded-lg  p-10 md:shadow-xl"
+      className="relative flex h-[500px] w-full max-w-sm  justify-center overflow-hidden rounded-lg  p-10"
       ref={containerRef}
     >
-      <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
-        <div className="grid grid-cols-3">
-          <div className="col-span-3 flex items-center justify-center">
-            <Box ref={div5Ref} className="">
-              {tr("cpu")[1]}
-            </Box>
-          </div>
-          <Box ref={div1Ref}>{tr("cpu")[0]}</Box>
-          <div></div>
-          <Box ref={div5Ref}>{tr("cpu")[2]}</Box>
-        </div>
-        <div className="flex flex-row items-center justify-center">
-          <Box
-            className=" rounded-sm  bg-transparent border-none"
-            ref={div4Ref}
-            border={false}
-          >
-            <img src="/images/logo.png" alt="" className="w-24 h-24" />
-          </Box>
-        </div>
-        <div className="grid grid-cols-3">
-          <Box ref={div6Ref}>{tr("cpu")[3]}</Box>
-          <div></div>
-          <Box ref={div7Ref}>{tr("cpu")[4]}</Box>
-          <div className="col-span-3 flex items-center justify-center">
-            <Box ref={div2Ref}>{tr("cpu")[5]}</Box>
-          </div>
-        </div>
-      </div>
-
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div1Ref}
@@ -115,6 +86,43 @@ export function CPU() {
         endYOffset={10}
         reverse
       />
+      <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
+        <div className="grid grid-cols-3 gap-5">
+          <div className="col-span-3 flex items-center justify-center">
+            <Box ref={div5Ref} className="">
+              {tr("cpu")[1]}
+            </Box>
+          </div>
+          <Box ref={div1Ref} className="-translate-x-[25px]">
+            {tr("cpu")[0]}
+          </Box>
+          <div></div>
+          <Box ref={div5Ref} className="-translate-x-[25px]">
+            {tr("cpu")[2]}
+          </Box>
+        </div>
+        <div className="flex flex-row items-center justify-center">
+          <Box
+            className=" rounded-sm  bg-transparent border-none"
+            ref={div4Ref}
+            border={false}
+          >
+            <img src="/images/logo.png" alt="" className="w-24 h-24" />
+          </Box>
+        </div>
+        <div className="grid grid-cols-3 gap-5">
+          <Box ref={div6Ref} className="-translate-x-[25px]">
+            {tr("cpu")[3]}
+          </Box>
+          <div></div>
+          <Box ref={div7Ref} className="-translate-x-[25px]">
+            {tr("cpu")[4]}
+          </Box>
+          <div className="col-span-3 flex items-center justify-center">
+            <Box ref={div2Ref}>{tr("cpu")[5]}</Box>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

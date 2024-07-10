@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "@/fonts";
+import { inter, readexPro } from "@/fonts";
 import { cn } from "@/lib/utils";
 
 // export const metadata: Metadata = {
@@ -15,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-black text-white")}>
+      <body
+        className={cn(
+          readexPro.className,
+          "bg-black text-white overflow-x-hidden"
+        )}
+      >
         {children}
       </body>
     </html>

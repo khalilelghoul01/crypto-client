@@ -8,6 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 export function stringToSlug(str: string) {
   return str
     .toLowerCase()
+    .trim()
+    .replace(/\s{2,}/g, " ")
     .replace(/ /g, "-")
     .replace(/[^\w-]+/g, "");
 }

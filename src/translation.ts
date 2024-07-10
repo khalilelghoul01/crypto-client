@@ -29,6 +29,28 @@ export const translation = {
         ],
         action: "Learn More",
       },
+
+      section2: {
+        head: "DOGEUNIVERSE",
+        description: [
+          "DOGEUNIVERSE the first multichain token built on its own blockchain, integrating games, NFTs, and a streaming platform.",
+          "This groundbreaking project is now launched, revolutionizing the industry and taking it to the next level.",
+        ],
+        title: "The Future of Blockchain is Here",
+        action: "Learn More",
+      },
+      section3: {
+        head: "DOGEUNIVERSE",
+        title: "The Applications and Uses of DOGEUNIVERSE",
+        description: [
+          "Beyond the technical prowess, DOGEUNIVERSE brings a wealth of applications to the digital world. From immersive Web3 games and unique NFTs to a state-of-the-art streaming platform, DOGEUNIVERSE is more than just a blockchain; it's a complete ecosystem.",
+          "Our platform leverages the security of the Ethereum blockchain while providing dedicated tools for developers and creators to innovate and thrive. Join us as we lead the way in the next generation of digital entertainment and asset management.",
+        ],
+        action: "Learn More",
+      },
+      marqueeGamesTitle: "Our Web3 Games",
+      qnaTitle: "Frequently Asked Questions",
+      howToBuyTitle: "How to Buy",
     },
   },
   fr: {
@@ -47,7 +69,7 @@ export const translation = {
         "TECHNOLOGIE",
         "PLATEFORME INTÉGRANTE",
         "JETON AI DANS CE",
-        "CHAÎNE DE BLOCS",
+        "BLOCKCHAIN",
         "NFT",
       ],
       section1: {
@@ -59,6 +81,27 @@ export const translation = {
         ],
         action: "En savoir plus",
       },
+      section2: {
+        head: "DOGEUNIVERSE",
+        description: [
+          "DOGEUNIVERSE le premier jeton multichaîne construit sur sa propre blockchain, intégrant des jeux, des NFT et une plateforme de streaming.",
+          "Ce projet révolutionnaire est maintenant lancé, révolutionnant l'industrie et la portant à un niveau supérieur.",
+        ],
+        title: "L'avenir de la blockchain est là",
+        action: "En savoir plus",
+      },
+      section3: {
+        head: "DOGEUNIVERSE",
+        title: "Les applications et utilisations de DOGEUNIVERSE",
+        description: [
+          "Au-delà de l'expertise technique, DOGEUNIVERSE apporte une multitude d'applications au monde numérique. Des jeux Web3 immersifs et des NFT uniques à une plateforme de streaming de pointe, DOGEUNIVERSE est plus qu'une simple blockchain ; c'est un écosystème complet.",
+          "Notre plateforme exploite la sécurité de la blockchain Ethereum tout en fournissant des outils dédiés aux développeurs et créateurs pour innover et prospérer. Rejoignez-nous alors que nous ouvrons la voie à la prochaine génération de divertissement numérique et de gestion d'actifs.",
+        ],
+        action: "En savoir plus",
+      },
+      marqueeGamesTitle: "Nos jeux Web3",
+      qnaTitle: "Questions fréquemment posées",
+      howToBuyTitle: "Comment acheter",
     },
   },
 } satisfies Translation;

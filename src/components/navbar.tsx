@@ -22,6 +22,7 @@ function Navbar() {
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -97,7 +98,7 @@ function Navbar() {
               className="md:hidden z-50"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+              <Menu size={24} />
             </button>
 
             <div className="hidden md:block">
@@ -108,10 +109,15 @@ function Navbar() {
       </div>
       {/* Mobile nav menu */}
       <nav
-        className={`fixed top-0 right-0 h-full w-full bg-black/50 backdrop-blur-lg  p-8 transform transition-transform duration-500 ease-in-out z-50 ${
+        className={`fixed inset-0 max-w-[100vw] max-h-[100vh] h-full w-full bg-black/50  flex items-center justify-center backdrop-blur-lg  p-8 transform transition-transform duration-500 ease-in-out z-50 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        <X
+          size={24}
+          className="absolute top-10 right-10 cursor-pointer"
+          onClick={() => setMenuOpen(false)}
+        />
         <ul className="flex flex-col items-center space-y-4">
           {tr("links").map((link: string) => (
             <li key={link}>
@@ -124,23 +130,25 @@ function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => {
+                router.push(`/${locale === "fr" ? "en" : "fr"}`);
+              }}
+            >
+              <img
+                src={
+                  locale === "fr"
+                    ? "/images/flags/us_flag.png"
+                    : "/images/flags/fr_flag.png"
+                }
+                alt={locale === "fr" ? "english" : "french"}
+                className="w-6 h-6"
+              />
+            </div>
+          </li>
         </ul>
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => {
-            router.push(`/${locale === "fr" ? "en" : "fr"}`);
-          }}
-        >
-          <img
-            src={
-              locale === "fr"
-                ? "/images/flags/us_flag.png"
-                : "/images/flags/fr_flag.png"
-            }
-            alt={locale === "fr" ? "english" : "french"}
-            className="w-6 h-6"
-          />
-        </div>
       </nav>
     </>
   );
