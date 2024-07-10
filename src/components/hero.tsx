@@ -23,26 +23,32 @@ function Hero() {
         )}
         text={tr("title")[1]}
       />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8">
-        <div>
+      <div
+        className={cn(
+          "relative grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8 ",
+          // center everything
+          "place-items-center"
+        )}
+      >
+        <div className="sticky h-fit">
           <CPU />
         </div>
-        <div className="flex gap-4 flex-col items-stretch">
+        <div className="sticky flex gap-4 flex-col items-stretch px-3 md:px-0">
           {tr("features").map((feature, idx) => (
             <div
               className="relative bg-white/10 p-4 rounded-lg shadow-md backdrop-blur-md fade-in ease-in-out"
               style={{
                 // delay each feature by 0.2s
-                animationDelay: `${idx * 0.2}s`,
+                animationDelay: `${idx * 0.4}s`,
               }}
             >
-              <BorderBeam delay={idx * 0.2} />
+              <BorderBeam delay={idx * 1} />
 
               {feature}
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center w-full scale-75">
           <iframe
             className=" w-full h-[700px]"
             allow="clipboard-write"

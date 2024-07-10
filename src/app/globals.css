@@ -84,3 +84,38 @@
     scale: 1;
   }
 }
+
+@keyframes organicFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+.organic-float-1 {
+  animation: organicFloat 6s ease-in-out infinite;
+}
+
+.organic-float-2 {
+  animation: organicFloat 7s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.organic-float-3 {
+  animation: organicFloat 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.organic-float-4 {
+  animation: organicFloat 9s ease-in-out infinite;
+  animation-delay: 1.5s;
+}

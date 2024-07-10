@@ -20,6 +20,15 @@ export const translation = {
         "BLOCKCHAIN",
         "NFT",
       ],
+      section1: {
+        head: "DOGEUNIVERSE",
+        title: "Technology and innovation of DOGEUNIVERSE",
+        description: [
+          "DOGEUNIVERSE is the epitome of cutting-edge technology in the blockchain space. Our unique multichain token operates on a proprietary blockchain that offers unmatched speed, security, and scalability. ",
+          "With instant bridging between Ethereum and Dogeuniverse, users can enjoy seamless transactions with up to 100x lower fees and 100x faster speeds compared to traditional blockchains. This innovative infrastructure ensures that DOGEUNIVERSE not only meets but exceeds the demands of modern digital asset management.",
+        ],
+        action: "Learn More",
+      },
     },
   },
   fr: {
@@ -41,6 +50,15 @@ export const translation = {
         "CHAÎNE DE BLOCS",
         "NFT",
       ],
+      section1: {
+        head: "DOGEUNIVERSE",
+        title: "Technologie et innovation de DOGEUNIVERSE",
+        description: [
+          "DOGEUNIVERSE est l'incarnation de la technologie de pointe dans l'espace blockchain. Notre jeton multichaîne unique fonctionne sur une blockchain propriétaire qui offre une vitesse, une sécurité et une évolutivité inégalées.",
+          "Avec un pont instantané entre Ethereum et Dogeuniverse, les utilisateurs peuvent profiter de transactions fluides avec des frais jusqu'à 100 fois moins élevés et des vitesses jusqu'à 100 fois plus rapides par rapport aux blockchains traditionnelles. Cette infrastructure innovante garantit que DOGEUNIVERSE répond non seulement mais dépasse les exigences de la gestion moderne des actifs numériques.",
+        ],
+        action: "En savoir plus",
+      },
     },
   },
 } satisfies Translation;
