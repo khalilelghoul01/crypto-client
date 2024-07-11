@@ -105,8 +105,12 @@ function RoadMap() {
                     {/* circle  */}
                     <div className="absolute right-[-12px] top-1/2 w-6 h-6 bg-white/100 rounded-full transform translate-y-[-50%]"></div>
                     {/* line */}
-                    <div className="flex flex-col items-center p-5 min-h-[80px] max-w-[350px] bg-black  relative rounded-lg shadow-md backdrop-blur-md ease-in-out">
+                    <div className="relative flex flex-col items-start p-5 min-h-[80px] max-w-[350px] bg-black   rounded-lg shadow-md backdrop-blur-md ease-in-out">
                       <BorderBeam />
+                      <div className="absolute -top-3 action-btn w-fit py-1 px-4 border rounded-2xl backdrop-blur-md border-gray-100/20">
+                        Phase {index + 1}
+                      </div>
+
                       <h4 className="text-white text-lg font-bold text-center">
                         {step.title[locale]}
                       </h4>
@@ -142,6 +146,10 @@ function RoadMap() {
                     {/* line */}
                     <div className="flex flex-col items-center p-5 min-h-[80px] max-w-[350px] bg-black  relative rounded-lg shadow-md backdrop-blur-md ease-in-out">
                       <BorderBeam />
+                      <div className="absolute -top-3 action-btn w-fit py-1 px-4 border rounded-2xl backdrop-blur-md border-gray-100/20">
+                        Phase {index + 1}
+                      </div>
+
                       <h4 className="text-white text-lg font-bold text-center">
                         {step.title[locale]}
                       </h4>
