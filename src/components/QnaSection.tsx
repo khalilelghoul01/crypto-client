@@ -32,7 +32,10 @@ const qna = [
 function QnaSection() {
   const tr = useTranslator();
   return (
-    <div className="flex flex-col items-stretch justify-center gap-4 max-w-[1200px] mx-auto px-5 md:px-2 lg:px-0">
+    <div
+      className="flex flex-col items-stretch justify-center gap-4 max-w-[1200px] mx-auto px-5 md:px-2 lg:px-0"
+      id="faqs"
+    >
       <div className="flex flex-col items-center justify-center gap-4 p-5">
         <h3
           className="text-3xl font-bold text-white text-center"

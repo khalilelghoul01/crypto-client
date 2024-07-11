@@ -6,7 +6,7 @@ function BgSVG() {
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 800 800"
-      className="fixed inset-0 z-0 pointer-events-none h-full scale-150 "
+      className="fixed inset-0 z-0 pointer-events-none h-full scale-75 md:scale-150 "
     >
       <defs>
         <filter

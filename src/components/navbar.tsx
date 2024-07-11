@@ -5,6 +5,7 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react"; // Assuming you have installed lucide-react
+import { translation } from "@/translation";
 
 function Navbar() {
   const tr = useTranslator();
@@ -63,10 +64,10 @@ function Navbar() {
             )}
           >
             <ul className="flex space-x-4">
-              {tr("links").map((link: string) => (
+              {tr("links").map((link: string, idx) => (
                 <li key={link}>
                   <a
-                    href={`#${stringToSlug(link)}`}
+                    href={`#${stringToSlug(translation.en.index.links[idx])}`}
                     className="hover:underline"
                   >
                     {link}
@@ -109,8 +110,8 @@ function Navbar() {
       </div>
       {/* Mobile nav menu */}
       <nav
-        className={`fixed inset-0 max-w-[100vw] max-h-[100vh] h-full w-full bg-black/50  flex items-center justify-center backdrop-blur-lg  p-8 transform transition-transform duration-500 ease-in-out z-50 ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed md:hidden inset-0 max-w-[100vw] max-h-[100vh] h-full w-full bg-black/50  flex items-center justify-center backdrop-blur-lg  p-8 transform transition-transform duration-500 ease-in-out z-50 ${
+          menuOpen ? "translate-x-0 scale-1" : "translate-x-full scale-0"
         }`}
       >
         <X
@@ -119,10 +120,10 @@ function Navbar() {
           onClick={() => setMenuOpen(false)}
         />
         <ul className="flex flex-col items-center space-y-4">
-          {tr("links").map((link: string) => (
+          {tr("links").map((link: string, idx) => (
             <li key={link}>
               <a
-                href={`#${stringToSlug(link)}`}
+                href={`#${stringToSlug(translation.en.index.links[idx])}`}
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
               >

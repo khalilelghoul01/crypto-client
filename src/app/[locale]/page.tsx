@@ -9,6 +9,7 @@ import Navbar from "@/components/navbar";
 import TextImageSection from "@/components/pargraphText";
 import Qna from "@/components/Qna";
 import QnaSection from "@/components/QnaSection";
+import RoadMap from "@/components/roadMap";
 import TextImagesSection from "@/components/textImagesSection";
 import { inter } from "@/fonts";
 import { useTranslator } from "@/lib/use-translator";
@@ -28,9 +29,10 @@ function page() {
       <LogoMarquee />
       <TextImagesSection />
       <MarqueeGames />
+      <RoadMap />
       <HowToBuy />
       <QnaSection />
-      <div className="h-[200vh]"></div>
+      <div className="h-[50px]"></div>
     </>
   );
 }

@@ -18,7 +18,7 @@ function TextImagesSection() {
         ]}
         invert={false}
       >
-        <div className="flex flex-col justify-center  gap-4 p-5">
+        <div className="flex flex-col justify-center  gap-4 p-5" id="about">
           <div className="bg-white/10 w-fit py-2 px-4 border rounded-2xl backdrop-blur-md border-gray-100/20">
             <span
               // text gradient text clip
@@ -83,7 +83,7 @@ function TextImagesSection() {
             {/* Outer Circles (reverse) */}
             <OrbitingCircles
               className="h-[50px] w-[50px] border-none bg-transparent"
-              radius={190}
+              radius={140}
               duration={20}
               reverse
             >
@@ -91,7 +91,26 @@ function TextImagesSection() {
             </OrbitingCircles>
             <OrbitingCircles
               className="h-[50px] w-[50px] border-none bg-transparent"
-              radius={190}
+              radius={140}
+              duration={20}
+              delay={20}
+              reverse
+            >
+              <img src="/images/coin_4.png" alt="" className="w-16 h-16" />
+            </OrbitingCircles>
+            <OrbitingCircles
+              className="h-[50px] w-[50px] border-none bg-transparent"
+              radius={200}
+              duration={20}
+              delay={10}
+              reverse
+            >
+              <img src="/images/coin_2.png" alt="" className="w-16 h-16" />
+            </OrbitingCircles>
+
+            <OrbitingCircles
+              className="h-[50px] w-[50px] border-none bg-transparent"
+              radius={200}
               duration={20}
               delay={20}
               reverse

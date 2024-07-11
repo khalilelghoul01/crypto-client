@@ -18,7 +18,7 @@ function HowToBuy() {
           {tr("howToBuyTitle")}
         </h3>
       </div>
-      <div className="pb-20 grid grid-cols-1 md:grid-cols-2 gap-4  p-5 overflow-x-clip max-w-[1200px] w-full mx-auto">
+      <div className="pb-10 md:pb-20 grid grid-cols-1 md:grid-cols-2 gap-4  p-5 overflow-x-clip max-w-[1200px] w-full mx-auto">
         <div className="flex flex-col gap-4">
           {[
             {
@@ -82,7 +82,10 @@ function HowToBuy() {
               fr: `Étape ${i + 1}`,
             };
             return (
-              <div className="relative flex gap-3 bg-white/10 p-4 rounded-lg shadow-md backdrop-blur-md ease-in-out">
+              <div
+                className="relative flex gap-3 bg-white/10 p-4 rounded-lg shadow-md backdrop-blur-md ease-in-out"
+                id="how-to-buy"
+              >
                 <BorderBeam />
                 <div className="absolute -top-3 action-btn w-fit py-1 px-4 border rounded-2xl backdrop-blur-md border-gray-100/20">
                   {stepTitle[locale]}

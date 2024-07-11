@@ -51,6 +51,7 @@ export const translation = {
       marqueeGamesTitle: "Our Web3 Games",
       qnaTitle: "Frequently Asked Questions",
       howToBuyTitle: "How to Buy",
+      roadmapTitle: "Roadmap",
     },
   },
   fr: {
@@ -102,6 +103,7 @@ export const translation = {
       marqueeGamesTitle: "Nos jeux Web3",
       qnaTitle: "Questions fréquemment posées",
       howToBuyTitle: "Comment acheter",
+      roadmapTitle: "Roadmap",
     },
   },
 } satisfies Translation;

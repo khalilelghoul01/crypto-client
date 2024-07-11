@@ -143,7 +143,7 @@ function MarqueeGames() {
   const locale = useLocale();
   const tr = useTranslator();
   return (
-    <div className="py-10 pt-40">
+    <div className="py-10 pt-40" id="tokenomics">
       <div className="flex flex-col items-center justify-center gap-4 p-5">
         <h3
           className="text-3xl font-bold text-white text-center"
