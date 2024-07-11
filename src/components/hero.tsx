@@ -12,7 +12,11 @@ function Hero() {
   return (
     <main className="flex  flex-col items-center justify-center min-h-screen pt-40">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[1200px] mx-auto place-items-center px-2 lg:px-0">
-        <div className={cn("flex flex-col gap-4 items-start justify-center")}>
+        <div
+          className={cn(
+            "flex flex-col gap-4 items-center md:items-start justify-center"
+          )}
+        >
           <TypingAnimation
             className={cn(
               "text-3xl md:text-6xl font-bold",
