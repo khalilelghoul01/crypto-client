@@ -11,6 +11,7 @@ import Qna from "@/components/Qna";
 import QnaSection from "@/components/QnaSection";
 import RoadMap from "@/components/roadMap";
 import TextImagesSection from "@/components/textImagesSection";
+import Tokenomics from "@/components/tokenomics";
 import { inter } from "@/fonts";
 import { useTranslator } from "@/lib/use-translator";
 import { cn } from "@/lib/utils";
@@ -31,6 +32,7 @@ function page() {
       <LogoMarquee />
       <TextImagesSection />
       <MarqueeGames />
+      <Tokenomics />
       <RoadMap />
       <HowToBuy />
       <QnaSection />

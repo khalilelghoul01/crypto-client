@@ -52,6 +52,37 @@ export const translation = {
       qnaTitle: "Frequently Asked Questions",
       howToBuyTitle: "How to Buy",
       roadmapTitle: "Roadmap",
+      tokenomicsTitles: [
+        {
+          title: "presale 20%",
+          description: "20% of the total supply will be sold in the presale.",
+        },
+        {
+          title: "liquidity 20%",
+          description:
+            "20% of the total supply will be added to the liquidity pool.",
+        },
+        {
+          title: "burn 20%",
+          description: "20% of the total supply will be burned.",
+        },
+        {
+          title: "team 20%",
+          description: "20% of the total supply will be allocated to the team.",
+        },
+        {
+          title: "marketing 20%",
+          description:
+            "20% of the total supply will be allocated to marketing.",
+        },
+        {
+          title: "charity 20%",
+          description: "20% of the total supply will be allocated to charity.",
+        },
+      ],
+      tokenomicsSubtitle: "The Engine that Drives DOGEUNIVERSE",
+      tokenomicsReadMore: "Read More",
+      tokenomicsFooter: "The Future of Blockchain is Here",
     },
   },
   fr: {
@@ -104,6 +135,36 @@ export const translation = {
       qnaTitle: "Questions fréquemment posées",
       howToBuyTitle: "Comment acheter",
       roadmapTitle: "Roadmap",
+      tokenomicsTitles: [
+        {
+          title: "prévente 20%",
+          description: "20% de l'offre totale sera vendue lors de la prévente.",
+        },
+        {
+          title: "liquidité 20%",
+          description:
+            "20% de l'offre totale sera ajoutée au pool de liquidité.",
+        },
+        {
+          title: "brûler 20%",
+          description: "20% de l'offre totale sera brûlée.",
+        },
+        {
+          title: "équipe 20%",
+          description: "20% de l'offre totale sera allouée à l'équipe.",
+        },
+        {
+          title: "marketing 20%",
+          description: "20% de l'offre totale sera allouée au marketing.",
+        },
+        {
+          title: "charité 20%",
+          description: "20% de l'offre totale sera allouée à la charité.",
+        },
+      ],
+      tokenomicsSubtitle: "Le moteur qui alimente DOGEUNIVERSE",
+      tokenomicsReadMore: "En savoir plus",
+      tokenomicsFooter: "L'avenir de la blockchain est là",
     },
   },
 } satisfies Translation;

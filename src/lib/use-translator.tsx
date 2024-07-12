@@ -37,7 +37,7 @@ function isString(obj: any): obj is string {
 }
 
 function isArrayOfStrings(obj: any): obj is string[] {
-  return Array.isArray(obj) && obj.every((item) => typeof item === "string");
+  return Array.isArray(obj);
 }
 
 function createT<T extends TranslationObject>(obj: T) {
